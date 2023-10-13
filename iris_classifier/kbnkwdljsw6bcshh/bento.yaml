@@ -1,0 +1,50 @@
+service: service:svc
+name: iris_classifier
+version: kbnkwdljsw6bcshh
+bentoml_version: 1.1.7
+creation_time: '2023-10-13T06:54:30.502293+00:00'
+labels:
+  owner: bentoml-team
+  project: gallery
+models:
+- tag: iris_clf:duntxtdjr6hcsshh
+  module: bentoml.sklearn
+  creation_time: '2023-10-13T06:09:48.464793+00:00'
+runners:
+- name: iris_clf
+  runnable_type: SklearnRunnable
+  embedded: false
+  models:
+  - iris_clf:duntxtdjr6hcsshh
+  resource_config: null
+apis:
+- name: classify
+  input_type: NumpyNdarray
+  output_type: NumpyNdarray
+docker:
+  distro: debian
+  python_version: '3.9'
+  cuda_version: null
+  env: null
+  system_packages: null
+  setup_script: null
+  base_image: null
+  dockerfile_template: null
+python:
+  requirements_txt: null
+  packages:
+  - scikit-learn
+  - pandas
+  lock_packages: true
+  index_url: null
+  no_index: null
+  trusted_host: null
+  find_links: null
+  extra_index_url: null
+  pip_args: null
+  wheels: null
+conda:
+  environment_yml: null
+  channels: null
+  dependencies: null
+  pip: null

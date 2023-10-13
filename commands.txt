@@ -1,0 +1,27 @@
+create conda environment:
+
+ conda create -n bentoml2 python==3.8 -y  
+
+install requirements:
+pip install -r requirements.txt   
+
+run train.py
+python bento_train.py
+
+to view all models that have been created
+bentoml models list
+
+to run test.py
+python bento_test.py
+
+
+to run service.py which contain API creation
+bentoml serve service.py:service --reload
+
+To build Bentos(a compiled file of whole code and datasets)
+
+bentoml build
+
+
+To view list of all bentoml files created
+bentoml list
